@@ -10,13 +10,9 @@ import SwiftUI
 struct PowerView: View {
     
     // MARK: Stored properties
-    @State var base: Double = 1
+    @State var power = Power(base: 1, exponent: 2)
     
     // MARK: Computed properties
-    var squared: Double {
-        return base * base
-    }
-    
     var body: some View {
         VStack {
             
@@ -24,7 +20,7 @@ struct PowerView: View {
             
             HStack(alignment: .top) {
 
-                Text("\(base.formatted())")
+                Text("\(power.base.formatted())")
                     .font(.system(size: 96))
 
                 Text("2")
@@ -33,11 +29,11 @@ struct PowerView: View {
                 Text("=")
                     .font(.system(size: 96))
 
-                Text("\(squared.formatted())")
+                Text("\(power.result.formatted())")
                     .font(.system(size: 96))
             }
             
-            Stepper(value: $base, step: 1.0, label: {
+            Stepper(value: $power.base, step: 1.0, label: {
                 Text("Base")
             })
                         

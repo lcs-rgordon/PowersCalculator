@@ -11,6 +11,7 @@
 		817840092D5C044500A095C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817840042D5C044500A095C4 /* Assets.xcassets */; };
 		8178400A2D5C044500A095C4 /* PowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817840052D5C044500A095C4 /* PowerView.swift */; };
 		8178400B2D5C044500A095C4 /* PowersCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817840062D5C044500A095C4 /* PowersCalculatorApp.swift */; };
+		8178400F2D5C052B00A095C4 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178400E2D5C052B00A095C4 /* Power.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		817840042D5C044500A095C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		817840052D5C044500A095C4 /* PowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerView.swift; sourceTree = "<group>"; };
 		817840062D5C044500A095C4 /* PowersCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowersCalculatorApp.swift; sourceTree = "<group>"; };
+		8178400E2D5C052B00A095C4 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				817840062D5C044500A095C4 /* PowersCalculatorApp.swift */,
+				8178400D2D5C051E00A095C4 /* Model */,
 				8178400C2D5C044900A095C4 /* Views */,
 				817840032D5C044500A095C4 /* Preview Content */,
 				817840042D5C044500A095C4 /* Assets.xcassets */,
@@ -73,6 +76,14 @@
 				817840052D5C044500A095C4 /* PowerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8178400D2D5C051E00A095C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8178400E2D5C052B00A095C4 /* Power.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8178400A2D5C044500A095C4 /* PowerView.swift in Sources */,
+				8178400F2D5C052B00A095C4 /* Power.swift in Sources */,
 				8178400B2D5C044500A095C4 /* PowersCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

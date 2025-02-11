@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PowerView.swift
 //  PowersCalculator
 //
 //  Created by Russell Gordon on 2025-02-11.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PowerView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    PowerView()
 }

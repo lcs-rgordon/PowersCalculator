@@ -24,21 +24,26 @@ struct PowerView: View {
             // When the power can be unwrapped, show the result
             Group {
                 if let power = viewModel.power {
-                    
-                    HStack(alignment: .top) {
+                    HStack(alignment: .center) {
+                        HStack(alignment: .top) {
+                            
+                            Text("\(power.base.formatted())")
+                                .font(.system(size: 96))
+                            
+                            Text("\(power.exponent)")
+                                .font(.system(size: 44))
+                        }
+                        HStack {
 
-                        Text("\(power.base.formatted())")
-                            .font(.system(size: 96))
+                            Text("=")
+                                .font(.system(size: 96))
 
-                        Text("\(power.exponent)")
-                            .font(.system(size: 44))
-
-                        Text("=")
-                            .font(.system(size: 96))
-
-                        Text("\(power.result.formatted())")
-                            .font(.system(size: 96))
+                            Text("\(power.result.formatted())")
+                                .font(.system(size: 96))
+                        }
                     }
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
 
                 } else {
                     // Show a message indicating that we are

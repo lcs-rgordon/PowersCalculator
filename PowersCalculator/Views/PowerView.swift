@@ -10,33 +10,54 @@ import SwiftUI
 struct PowerView: View {
     
     // MARK: Stored properties
-    @State var power = Power(base: 1, exponent: 2)
     
+    // Holds the view model, to track current state of
+    // data within the app
+    @State var viewModel = PowerViewModel()
+
     // MARK: Computed properties
     var body: some View {
         VStack {
             
             Spacer()
             
-            HStack(alignment: .top) {
+            // When the power can be unwrapped, show the result
+            Group {
+                if let power = viewModel.power {
+                    
+                    HStack(alignment: .top) {
 
-                Text("\(power.base.formatted())")
-                    .font(.system(size: 96))
+                        Text("\(power.base.formatted())")
+                            .font(.system(size: 96))
 
-                Text("2")
-                    .font(.system(size: 44))
+                        Text("\(power.exponent)")
+                            .font(.system(size: 44))
 
-                Text("=")
-                    .font(.system(size: 96))
+                        Text("=")
+                            .font(.system(size: 96))
 
-                Text("\(power.result.formatted())")
-                    .font(.system(size: 96))
+                        Text("\(power.result.formatted())")
+                            .font(.system(size: 96))
+                    }
+
+                } else {
+                    // Show a message indicating that we are
+                    // awaiting reasonable input
+                    ContentUnavailableView(
+                        "Unable to evaluate power",
+                        systemImage: "gear.badge.questionmark",
+                        description: Text(viewModel.recoverySuggestion)
+                    )
+                }
             }
-            
-            Stepper(value: $power.base, step: 1.0, label: {
-                Text("Base")
-            })
+            .frame(maxHeight: 300)
                         
+            TextField("Base", text: $viewModel.providedBase)
+                .textFieldStyle(.roundedBorder)
+            
+            TextField("Exponent", text: $viewModel.providedExponent)
+                .textFieldStyle(.roundedBorder)
+
             Spacer()
         }
         .padding()

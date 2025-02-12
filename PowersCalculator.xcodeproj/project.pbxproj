@@ -12,6 +12,7 @@
 		8178400A2D5C044500A095C4 /* PowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817840052D5C044500A095C4 /* PowerView.swift */; };
 		8178400B2D5C044500A095C4 /* PowersCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817840062D5C044500A095C4 /* PowersCalculatorApp.swift */; };
 		8178400F2D5C052B00A095C4 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178400E2D5C052B00A095C4 /* Power.swift */; };
+		817840162D5D1B3700A095C4 /* PowerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817840152D5D1B3700A095C4 /* PowerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		817840052D5C044500A095C4 /* PowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerView.swift; sourceTree = "<group>"; };
 		817840062D5C044500A095C4 /* PowersCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowersCalculatorApp.swift; sourceTree = "<group>"; };
 		8178400E2D5C052B00A095C4 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
+		817840152D5D1B3700A095C4 /* PowerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				817840062D5C044500A095C4 /* PowersCalculatorApp.swift */,
 				8178400D2D5C051E00A095C4 /* Model */,
+				817840142D5D1B1200A095C4 /* ViewModels */,
 				8178400C2D5C044900A095C4 /* Views */,
 				817840032D5C044500A095C4 /* Preview Content */,
 				817840042D5C044500A095C4 /* Assets.xcassets */,
@@ -84,6 +87,14 @@
 				8178400E2D5C052B00A095C4 /* Power.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		817840142D5D1B1200A095C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				817840152D5D1B3700A095C4 /* PowerViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817840162D5D1B3700A095C4 /* PowerViewModel.swift in Sources */,
 				8178400A2D5C044500A095C4 /* PowerView.swift in Sources */,
 				8178400F2D5C052B00A095C4 /* Power.swift in Sources */,
 				8178400B2D5C044500A095C4 /* PowersCalculatorApp.swift in Sources */,
